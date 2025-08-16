@@ -1,0 +1,46 @@
+@use "../../styles/layout" as *;
+@use "../../styles/variaveis" as *;
+
+.header {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        @include container;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+
+    &__input {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        input {
+            background-color: $color-light;
+            padding: 1rem;
+            min-width: 40rem;
+            border-radius: $border-radius-base;
+            border: 1px solid $color-dark;
+            outline: none;
+        }
+        button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: transparent;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            color: $color-grey;
+            font-size: 1.2rem;
+            
+        }
+    }
+}
