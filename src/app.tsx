@@ -3,6 +3,8 @@ import Banner from "./components/Banner/Banner";
 import IconesHome from "./components/IconesHome/IconesHome";
 import { Produtos } from "./components/Produtos/Produtos";
 import "./styles/global.scss";
+import '@splidejs/splide/dist/css/splide.min.css';
+
 
 export default function App() {
     return (
