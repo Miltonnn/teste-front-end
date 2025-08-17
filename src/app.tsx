@@ -3,6 +3,8 @@ import Banner from "./components/Banner/Banner";
 import IconesHome from "./components/IconesHome/IconesHome";
 import { Produtos } from "./components/Produtos/Produtos";
 import Parceiros from "./components/Parceiros/Parceiros";
+import Marcas from "./components/Marcas/Marcas";
+import ProdutosRelacionados from "./components/ProdutosRelacionados/ProdutosRelacionados";
 import "./styles/global.scss";
 import '@splidejs/splide/dist/css/splide.min.css';
 
@@ -15,8 +17,10 @@ export default function App() {
             <IconesHome />
             <Produtos />
             <Parceiros />
-            <Produtos />
+            <ProdutosRelacionados />
             <Parceiros />
+            <Marcas />
+            <ProdutosRelacionados />
         </div>
     );
 }

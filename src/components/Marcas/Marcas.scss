@@ -1,0 +1,22 @@
+@use "../../styles/layout" as *;
+@use "../../styles/variaveis" as *;
+
+.marcas-home {
+    padding: 3rem 0;
+    @include container($breakpoint-xxl);
+
+    &__content {
+        h2 {
+            color: $color-primary;
+            text-align: center;
+        }
+    }
+
+    &__logos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+}
