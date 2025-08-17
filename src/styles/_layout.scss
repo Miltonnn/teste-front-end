@@ -1,23 +1,27 @@
-@use "./variaveis" as vars;
+@use "./variaveis" as *;
 
-@mixin container {
+@mixin container($max: $breakpoint-xxl) {
     width: 100%;
     margin: 0 auto;
     max-width: 100%;
 
-    @media (min-width: 576px) {
+    @media (min-width: $breakpoint-sm) {
         max-width: 540px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint-md) {
         max-width: 720px;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: $breakpoint-lg) {
         max-width: 960px;
     }
 
-    @media (min-width: 1200px) {
-        max-width: 1280px;
+    @media (min-width: $breakpoint-xl) {
+        max-width: if($max >=$breakpoint-xl, $breakpoint-xl, $max);
+    }
+
+    @media (min-width: $breakpoint-xxl) {
+        max-width: if($max >=$breakpoint-xxl, $breakpoint-xxl, $max);
     }
 }

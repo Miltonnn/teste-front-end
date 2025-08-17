@@ -1,28 +1,41 @@
 @use 'variaveis' as *;
 
-.btn--primary {
-    background-color: $color-secondary;
-    color: $color-dark;
+// estilos base do botão
+.btn {
+    padding: .7rem 2rem;
     border-radius: $border-radius-base-01;
-    padding: .8rem 2rem;
     font-size: $font-size-base;
     border: none;
     cursor: pointer;
     transition: .3s;
-    width: 100%;
-    max-width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 600;
+    width: 100%;
+    max-width: 200px;
+}
 
-    &:hover {
+.btn--primary {
+    @extend .btn;
+    background-color: $color-secondary;
+    color: $color-dark;
+
+    &:hover,
+    &:active {
         background-color: $color-primary;
         color: $color-white;
     }
+}
 
+.btn--secondary {
+    @extend .btn;
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover,
     &:active {
-        background-color: $color-primary;
+        background-color: $color-dark;
         color: $color-white;
     }
 }

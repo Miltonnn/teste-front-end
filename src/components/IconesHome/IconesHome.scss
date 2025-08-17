@@ -7,7 +7,7 @@
     gap: 30px;
     padding: 2rem 0;
     justify-content: center;
-    @include container;
+    @include container($breakpoint-xxl);
 
     &__item {
         display: flex;
@@ -47,13 +47,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 8rem;
-        height: 8rem;
+        width: 8.5rem;
+        height: 8.5rem;
         padding: 1rem;
         background-color: $color-light-02;
         border-radius: $border-radius-base;
         filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
         transition: .3s;
-
     }
 }

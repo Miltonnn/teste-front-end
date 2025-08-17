@@ -1,0 +1,106 @@
+@use "../../styles/layout" as *;
+@use "../../styles/variaveis" as *;
+
+.produtos-home {
+    padding: 3rem 0;
+    @include container($breakpoint-xxl);
+
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        @include container($breakpoint-xl);
+
+        h2 {
+            color: $color-primary;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        span {
+            flex: 1;
+            height: 1px;
+            background-color: $color-light-01;
+        }
+    }
+
+    &__link ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        color: $color-dark-01;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        li {
+            flex: 1;
+        }
+
+        li a {
+            padding: .5rem 0;
+            border: 1px solid $color-grey-03;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            transition: .3s;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        margin-top: 2rem;
+
+        // opcional: responsivo
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+
+        .card-produto {
+            background-color: $color-white;
+            padding: 1rem;
+            border-radius: $border-radius-base;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+        }
+
+        .card-produto__img {
+            width: 100%;
+            height: 14.25rem;
+            overflow: hidden;
+        }
+
+        .card-produto__img img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1/1;
+        }
+        .card-produto__info{
+            display: flex;
+            flex-direction: column;
+            gap: .7rem;
+        }
+        .btn--secondary{
+            width: 100%;
+            max-width: 100%;
+        }
+
+    }
+}

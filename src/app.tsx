@@ -1,6 +1,7 @@
 import Header from "./components/Header/Header";
 import Banner from "./components/Banner/Banner";
 import IconesHome from "./components/IconesHome/IconesHome";
+import { Produtos } from "./components/Produtos/Produtos";
 import "./styles/global.scss";
 
 export default function App() {
@@ -9,6 +10,7 @@ export default function App() {
             <Header />
             <Banner />
             <IconesHome />
+            <Produtos />
         </div>
     );
 }

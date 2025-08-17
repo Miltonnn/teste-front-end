@@ -1,10 +1,12 @@
 // Cores
-$color-primary: #3019B2;   
+$color-primary: #3019B2;
 $color-secondary: #F7CA11;
 $color-roxo: #271C47;
 $color-grey: #9F9F9F;
 $color-grey-01: #3F3F40;
+$color-grey-03: #BDBDBD;
 $color-dark: #000;
+$color-dark-01: #3b3b3b;
 $color-white: #fff;
 $color-light: #F6F5F2;
 $color-light-01: #F0F0F0;
@@ -27,12 +29,9 @@ $spacing-md: 16px;
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+$breakpoint-xl: 1160px;
+$breakpoint-xxl: 1364px;
 
 /* Border radius */
 $border-radius-base: 10px;
 $border-radius-base-01: 5px;
-
-
-
-
