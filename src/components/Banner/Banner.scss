@@ -19,7 +19,6 @@
         position: relative;
         z-index: 2;
         gap: 30px;
-        @include container;
 
         .banner__title {
             color: $color-white;

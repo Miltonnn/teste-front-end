@@ -26,15 +26,17 @@ const iconesHome: IconeHome[] = [
 
 const IconesHome = () => {
     return (
-        <section className="icones-home">
-            {iconesHome.map((icone, index) => (
-                <div key={index} className="icones-home__item">
-                    <div className="icones-home__item-img">
-                        <img src={icone.src} alt={icone.alt} title={icone.title} />
+        <section className="container">
+            <div className="icones-home">
+                {iconesHome.map((icone, index) => (
+                    <div key={index} className="icones-home__item">
+                        <div className="icones-home__item-img">
+                            <img src={icone.src} alt={icone.alt} title={icone.title} />
+                        </div>
+                        <span>{icone.title}</span>
                     </div>
-                    <span>{icone.title}</span>
-                </div>
-            ))}
+                ))}
+            </div>
         </section>
     );
 };

@@ -141,7 +141,7 @@ export const Produtos = ({ mostrarLinks = false }: ProdutosProps) => {
     }
 
     return (
-        <section className="produtos-home">
+        <section className="container produtos-home">
             <div className="produtos-home__title">
                 <span></span>
                 <h2>Produtos relacionados</h2>

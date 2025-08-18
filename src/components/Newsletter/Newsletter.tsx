@@ -15,7 +15,7 @@ const Newsletter = () => {
 
     return (
         <section className="newsletter">
-            <div className="newsletter__content">
+            <div className="container newsletter__content">
                 <div>
                     <h2>Inscreva-se na nossa newsletter</h2>
                     <p>Assine a nossa newsletter e receba as novidades e conteúdos exclusivos da Econverse.</p>

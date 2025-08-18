@@ -7,7 +7,7 @@
     gap: 30px;
     padding: 2rem 0;
     justify-content: center;
-    @include container($breakpoint-xxl);
+    
 
     &__item {
         display: flex;

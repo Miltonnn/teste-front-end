@@ -1,14 +1,13 @@
 @use "./variaveis" as *;
 
-@mixin container($max: $breakpoint-xxl) {
+.container {
     width: 100%;
     margin: 0 auto;
-    max-width: 100%;
     padding: 2rem .625rem;
+    max-width: 100%;
 
     @media (min-width: $breakpoint-sm) {
         max-width: 540px;
-
     }
 
     @media (min-width: $breakpoint-md) {
@@ -20,10 +19,10 @@
     }
 
     @media (min-width: $breakpoint-xl) {
-        max-width: if($max >=$breakpoint-xl, $breakpoint-xl, $max);
+        max-width: $breakpoint-xl;
     }
 
     @media (min-width: $breakpoint-xxl) {
-        max-width: if($max >=$breakpoint-xxl, $breakpoint-xxl, $max);
+        max-width: $breakpoint-xxl;
     }
 }

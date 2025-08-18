@@ -94,7 +94,7 @@ const Header = () => {
 
     return (
         <header className={`header ${scrolled ? "header--fixed" : ""}`}>
-            <div className="header__container">
+            <div className="container header__container">
                 {/* Top icons */}
                 <div className="header__itens">
                     {iconsTopo.map((icon, index) => (

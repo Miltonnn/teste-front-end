@@ -22,7 +22,7 @@ const Footer = () => {
     return (
         <footer>
             <div className="footer">
-                <div className="footer__content">
+                <div className="container footer__content">
                     <div className="footer__box">
                         <div className="footer__logo">
                             <img src={logo} alt="Logo econverse" title="Logo econverse" />

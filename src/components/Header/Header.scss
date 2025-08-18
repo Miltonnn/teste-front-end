@@ -30,8 +30,7 @@
         }
     }
 
-    &__container {
-        @include container;
+    .container {
         padding-bottom: 0;
     }
 

@@ -28,7 +28,7 @@ const parceiros: Parceiro[] = [
 
 const Parceiros = () => {
     return (
-        <section className="parceiros-home">
+        <section className="container parceiros-home">
             {parceiros.map((item) => (
                 <div
                     key={item.id}
