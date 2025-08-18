@@ -1,26 +1,16 @@
 import './Marcas.scss';
-
-import marca1 from '../../assets/marcas/img-marcas.webp';
-import marca2 from '../../assets/marcas/img-marcas.webp';
-import marca3 from '../../assets/marcas/img-marcas.webp';
-import marca4 from '../../assets/marcas/img-marcas.webp';
-import marca5 from '../../assets/marcas/img-marcas.webp';
-
-interface Marca {
-    id: number;
-    nome: string;
-    imagem: string;
-}
-
-const marcas: Marca[] = [
-    { id: 1, nome: "Marca da Econverse", imagem: marca1 },
-    { id: 2, nome: "Marca da Econverse", imagem: marca2 },
-    { id: 3, nome: "Marca da Econverse", imagem: marca3 },
-    { id: 4, nome: "Marca da Econverse", imagem: marca4 },
-    { id: 5, nome: "Marca da Econverse", imagem: marca5 },
-];
+import { marcas, type Marca } from './MarcasData';
 
 const Marcas = () => {
+
+    const MarcaItem = ({ marca }: { marca: Marca }) => (
+        <img
+            src={marca.imagem}
+            alt={marca.nome}
+            title={marca.nome}
+        />
+    );
+
     return (
         <section className='marcas-home'>
             <div className="marcas-home__content">
@@ -28,16 +18,11 @@ const Marcas = () => {
             </div>
             <div className="marcas-home__logos">
                 {marcas.map((marca) => (
-                    <img
-                        key={marca.id}
-                        src={marca.imagem}
-                        alt={marca.nome}
-                        title={marca.nome}
-                    />
+                    <MarcaItem key={marca.id} marca={marca} />
                 ))}
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Marcas
+export default Marcas;
