@@ -17,23 +17,61 @@ A aplicação foi construída em **React com TypeScript** e **Sass**, com foco e
 ## 📂 Estrutura do projeto
 
 O projeto foi totalmente **componentizado**, cada parte da interface possui seu próprio diretório e arquivo de estilos.  
-Nos estilos, utilizei **variáveis** para padronizar cores e breakpoints, além de **mixins e classes utilitárias** para evitar repetição de código, como por exemplo:
+Segue a estrutura detalhada com destaques das principais mudanças:
 
-- `.container` → garante que todos os containers sigam o mesmo padrão de largura máxima, alinhamento e espaçamento, podendo ser aplicada diretamente nas `<div>`s.  
-- `@mixin button` → centraliza estilos comuns de botões, permitindo criar variantes (`btn--primary`, `btn--secondary`) de forma consistente.  
+```text
+src/
+├─ assets/                # Imagens, ícones e logotipos
+│  ├─ icones/
+│  ├─ marcas/
+│  └─ parceiros/
+├─ components/
+│  ├─ Header/
+│  │  ├─ Header.tsx
+│  │  ├─ Header.scss
+│  │  ├─ IconTopo.tsx          # Subcomponente dos ícones do topo
+│  │  └─ headerData.ts         # Dados dos ícones e links
+│  ├─ Footer/
+│  │  ├─ Footer.tsx
+│  │  ├─ Footer.scss
+│  │  └─ footerData.ts         # Dados de links e redes sociais
+│  ├─ IconesHome/
+│  │  ├─ IconesHome.tsx
+│  │  ├─ IconesHome.scss
+│  │  └─ IconeHomeItem.tsx     # Subcomponente de cada ícone
+│  ├─ Marcas/
+│  │  ├─ Marcas.tsx
+│  │  ├─ Marcas.scss
+│  │  └─ marcasData.ts         # Dados das marcas
+│  ├─ Newsletter/
+│  │  ├─ Newsletter.tsx
+│  │  └─ Newsletter.scss
+│  ├─ Parceiros/
+│  │  ├─ Parceiros.tsx
+│  │  ├─ Parceiros.scss
+│  │  └─ parceirosData.ts      # Dados dos parceiros
+│  └─ Produtos/
+│     ├─ Produtos.tsx           # Componente principal
+│     ├─ ProdutosModal.tsx      # Modal de produto
+│     ├─ Produtos.scss
+│     ├─ ProdutoData.ts         # Tipos e links do produto
+│     └─ @types/
+│        └─ splidejs__react-splide.d.ts
+├─ hooks/
+│  └─ useProdutos.ts            # Hook para consumo da API de produtos
+└─ App.tsx
 
-Isso torna os estilos **mais reutilizáveis, fáceis de manter e escaláveis**, sem precisar repetir CSS global ou mixins em vários arquivos.
-
----
-
+````
 ## 🎯 Funcionalidades e Destaques
-- ✅ **Header fixo (HeaderFIXED):** facilita navegação sem necessidade de rolar até o topo.  
-- ✅ **Componentização:** cada componente isolado, com seu próprio Sass.  
-- ✅ **Boas práticas de SEO:** HTML semântico, atributos alternativos em imagens e estrutura clara.  
-- ✅ **Carrosséis responsivos** implementados com Splide.js.  
+- ✅ **Header fixo (HeaderFIXED):** facilita a navegação sem precisar rolar até o topo.  
+- ✅ **Componentização completa:** cada componente isolado, com seu próprio arquivo de estilos Sass.  
+- ✅ **Boas práticas de SEO:** HTML semântico, uso correto de atributos `alt` em imagens e estrutura clara.  
+- ✅ **Carrosséis responsivos** implementados com **Splide.js**, adaptando-se a diferentes telas.  
 - ✅ **Consumo de API via proxy**, garantindo funcionamento local mesmo com restrições de CORS.  
-
----
+- ✅ **Organização de dados** em arquivos separados (`headerData.ts`, `footerData.ts`, `marcasData.ts`, `parceirosData.ts`, `ProdutoData.ts`) para maior clareza e manutenção.  
+- ✅ **Modal de produtos** com controle de quantidade, botão de compra e fallback de imagens.  
+- ✅ **Reutilização de subcomponentes** (ex.: `IconeHomeItem.tsx`) para maior modularidade e manutenção mais fácil.  
+- ✅ **Estilos reutilizáveis e consistentes:** uso de mixins (`@mixin button`) e classes utilitárias (`.container`) em todo o projeto.
 
 ## ⚙️ Como rodar o projeto localmente
 
@@ -52,8 +90,11 @@ Isso torna os estilos **mais reutilizáveis, fáceis de manter e escaláveis**, 
 4. Execute o projeto:
    ```bash
    npm run dev
+   
 
 ## 📝 Conclusão
 
 Este projeto foi uma ótima oportunidade para aplicar conhecimentos em **React, TypeScript e Sass**, reforçando boas práticas de **componentização, organização de código e SEO**.  
-O código está estruturado de forma clara e escalável, servindo como base para projetos futuros.
+
+
+
