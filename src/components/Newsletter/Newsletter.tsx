@@ -14,7 +14,7 @@ const Newsletter = () => {
     };
 
     return (
-        <div className="newsletter">
+        <section className="newsletter">
             <div className="newsletter__content">
                 <div>
                     <h2>Inscreva-se na nossa newsletter</h2>
@@ -37,7 +37,7 @@ const Newsletter = () => {
                     </label>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

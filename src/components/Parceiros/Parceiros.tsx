@@ -28,7 +28,7 @@ const parceiros: Parceiro[] = [
 
 const Parceiros = () => {
     return (
-        <div className="parceiros-home">
+        <section className="parceiros-home">
             {parceiros.map((item) => (
                 <div
                     key={item.id}
@@ -48,7 +48,7 @@ const Parceiros = () => {
                     </div>
                 </div>
             ))}
-        </div>
+        </section>
     );
 };
 

@@ -4,7 +4,7 @@ import banner from "../../assets/banner.webp";
 
 const Banner = () => {
     return (
-        <div className="banner" style={{ backgroundImage: `url(${banner})`, }} >
+        <section className="banner" style={{ backgroundImage: `url(${banner})`, }} aria-label="Banner de promoções" >
             <div className="banner__content">
                 <div>
                     <h1 className="banner__title">Venha conhecer nossas  <span>promoções</span></h1>
@@ -13,7 +13,7 @@ const Banner = () => {
                 <a href="#" className="btn--primary" title="Confira nossos produtos">Ver produto</a>
             </div>
             <div className="banner__overlay"></div>
-        </div>
+        </section>
     );
 };
 

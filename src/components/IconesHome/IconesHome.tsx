@@ -26,7 +26,7 @@ const iconesHome: IconeHome[] = [
 
 const IconesHome = () => {
     return (
-        <div className="icones-home">
+        <section className="icones-home">
             {iconesHome.map((icone, index) => (
                 <div key={index} className="icones-home__item">
                     <div className="icones-home__item-img">
@@ -35,7 +35,7 @@ const IconesHome = () => {
                     <span>{icone.title}</span>
                 </div>
             ))}
-        </div>
+        </section>
     );
 };
 

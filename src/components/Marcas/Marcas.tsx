@@ -22,7 +22,7 @@ const marcas: Marca[] = [
 
 const Marcas = () => {
     return (
-        <div className='marcas-home'>
+        <section className='marcas-home'>
             <div className="marcas-home__content">
                 <h2>Navegue por marcas</h2>
             </div>
@@ -36,7 +36,7 @@ const Marcas = () => {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     )
 }
 

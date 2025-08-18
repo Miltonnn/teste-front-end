@@ -4,7 +4,7 @@ import IconesHome from "./components/IconesHome/IconesHome";
 import { Produtos } from "./components/Produtos/Produtos";
 import Parceiros from "./components/Parceiros/Parceiros";
 import Marcas from "./components/Marcas/Marcas";
-import ProdutosRelacionados from "./components/ProdutosRelacionados/ProdutosRelacionados";
+
 import Newsletter from "./components/Newsletter/Newsletter";
 import Footer from "./components/Footer/Footer";
 import "./styles/global.scss";
@@ -17,12 +17,12 @@ export default function App() {
             <Header />
             <Banner />
             <IconesHome />
+            <Produtos mostrarLinks={true} />
+            <Parceiros />
             <Produtos />
             <Parceiros />
-            <ProdutosRelacionados />
-            <Parceiros />
             <Marcas />
-            <ProdutosRelacionados />
+            <Produtos />
             <Newsletter />
             <Footer />
         </div>
