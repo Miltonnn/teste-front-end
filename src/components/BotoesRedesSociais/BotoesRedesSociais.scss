@@ -1,0 +1,13 @@
+@use "../../styles/variaveis" as *;
+@use "../../styles/mixins" as *;
+
+.botoes-redes {
+    @include btn-redes;
+    background-color: $color-dark;
+    color: $color-white;
+
+    &:hover {
+        background: $color-dark-01;
+        transform: translateY(-3px);
+    }
+}

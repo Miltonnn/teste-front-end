@@ -4,8 +4,9 @@ import IconesHome from "./components/IconesHome/IconesHome";
 import { Produtos } from "./components/Produtos/Produtos";
 import Parceiros from "./components/Parceiros/Parceiros";
 import Marcas from "./components/Marcas/Marcas";
-
 import Newsletter from "./components/Newsletter/Newsletter";
+import BotaoFlutuante from "./components/BotaoFlutuante/BotaoFlutuante";
+import BotoesRedesSociais from "./components/BotoesRedesSociais/BotoesRedesSociais";
 import Footer from "./components/Footer/Footer";
 import "./styles/global.scss";
 import '@splidejs/splide/dist/css/splide.min.css';
@@ -16,6 +17,7 @@ export default function App() {
     return (
         <div>
             <Header />
+            
             <Banner />
             <IconesHome />
             <Produtos mostrarLinks={true} />
@@ -25,6 +27,8 @@ export default function App() {
             <Marcas />
             <Produtos />
             <Newsletter />
+            <BotaoFlutuante />
+            <BotoesRedesSociais />
             <Footer />
         </div>
     );

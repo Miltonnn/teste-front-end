@@ -1,0 +1,6 @@
+@use "../../styles/variaveis" as *;
+@use "../../styles/mixins" as *;
+
+.botao-flutuante {
+    @include btn-scrol;
+}
