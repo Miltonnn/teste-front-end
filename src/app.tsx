@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-import Banner from "./components/Banner/Banner";
+import Hero from "./components/Hero/Hero";
 import IconesHome from "./components/IconesHome/IconesHome";
 import { Produtos } from "./components/Produtos/Produtos";
 import Parceiros from "./components/Parceiros/Parceiros";
@@ -18,7 +18,7 @@ export default function App() {
         <div>
             <Header />
             
-            <Banner />
+            <Hero />
             <IconesHome />
             <Produtos mostrarLinks={true} />
             <Parceiros />

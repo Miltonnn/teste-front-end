@@ -8,7 +8,7 @@ const FooterLinks = () => (
                 <ul className="footer__links">
                     {group.links.map((link, idx) => (
                         <li key={idx}>
-                            <a href={link.href}>{link.label}</a>
+                            <a title={link.label} href={link.href}>{link.label}</a>
                         </li>
                     ))}
                 </ul>
