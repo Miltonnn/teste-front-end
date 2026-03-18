@@ -98,6 +98,7 @@ export const Produtos = ({ mostrarLinks = false }: ProdutosProps) => {
                   <img
                     src={p.photo}
                     alt={p.productName}
+                    title={`Imagem ilustrativa ${p.productName}`}
                     onError={(e) => {
                       (e.target as HTMLImageElement).src =
                         "https://via.placeholder.com/300x300?text=Produto";

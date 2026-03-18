@@ -2,238 +2,233 @@
 @use "../../styles/variaveis" as *;
 
 .produtos-home {
-    padding: 3rem 0;
+  padding: 3rem 0;
 
-    &__title {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        width: 100%;
-        padding-bottom: 5px !important;
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding-bottom: 5px !important;
 
-
-        h2 {
-            color: $color-primary;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        span {
-            flex: 1;
-            height: 1px;
-            background-color: $color-light-01;
-        }
+    h2 {
+      color: $color-primary;
+      font-weight: 600;
+      white-space: nowrap;
     }
 
-    &__link ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-        color: $color-dark-01;
-        font-weight: 400;
-        text-transform: uppercase;
+    span {
+      flex: 1;
+      height: 1px;
+      background-color: $color-light-01;
+    }
+  }
 
-        li {
-            flex: 1;
-        }
+  &__link ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    color: $color-dark-01;
+    font-weight: 400;
+    text-transform: uppercase;
 
-        li a {
-            padding: .5rem 0;
-            border: 1px solid $color-grey-03;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            transition: .3s;
-
-            &:hover {
-                color: $color-primary;
-            }
-        }
+    li {
+      flex: 1;
     }
 
-    .produtos__item {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        color: $color-dark;
-        font-weight: 600;
-        transition: 0.3s;
+    li a {
+      padding: 0.5rem 0;
+      border: 1px solid $color-grey-03;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      transition: 0.3s;
 
-        &:hover {
-            color: $color-primary;
-        }
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  .produtos__item {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: $color-dark;
+    font-weight: 600;
+    transition: 0.3s;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__carousel {
+    .card-produto {
+      background-color: $color-white;
+      padding: 1rem;
+      margin: 2rem 0.4rem;
+      border-radius: $border-radius-base;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
     }
 
-
-    &__carousel {
-
-        .card-produto {
-            background-color: $color-white;
-            padding: 1rem;
-            margin: 2rem .4rem;
-            border-radius: $border-radius-base;
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-        }
-
-        .card-produto__img {
-            width: 100%;
-            height: 14.25rem;
-            overflow: hidden;
-        }
-
-        .card-produto__img img {
-            width: 100%;
-            height: 100%;
-            aspect-ratio: 1/1;
-        }
-
-        .card-produto__info {
-            display: flex;
-            flex-direction: column;
-            gap: .3rem;
-        }
-
-        .card-produto__info h3 {
-            padding-bottom: .7rem;
-        }
-
-        .card-produto__price {
-            font-weight: 600;
-            font-size: 1.25rem;
-            color: $color-dark-01
-        }
-
-        .card-produto__risk {
-            text-decoration: line-through;
-            color: $color-grey-02;
-        }
-
-        .card-produto__frete {
-            color: $color-primary;
-        }
-
-        .btn--secondary {
-            width: 100%;
-            max-width: 100%;
-            text-transform: uppercase;
-            margin-top: .7rem;
-        }
+    .card-produto__img {
+      width: 100%;
+      height: 14.25rem;
+      overflow: hidden;
     }
 
+    .card-produto__img img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1/1;
+    }
+
+    .card-produto__info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .card-produto__info h3 {
+      padding-bottom: 0.7rem;
+    }
+
+    .card-produto__price {
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: $color-dark-01;
+    }
+
+    .card-produto__risk {
+      text-decoration: line-through;
+      color: $color-grey-02;
+    }
+
+    .card-produto__frete {
+      color: $color-primary;
+    }
+
+    .btn--secondary {
+      width: 100%;
+      max-width: 100%;
+      text-transform: uppercase;
+      margin-top: 0.7rem;
+    }
+  }
 }
 
 /* MODAL */
 .modal {
-    position: fixed;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  &__overlay {
+    position: absolute;
     inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &__content {
+    position: relative;
+    background: $color-white;
+    padding: 2rem;
+    border-radius: 12px;
+    z-index: 1001;
+    max-width: 800px;
+    width: 90%;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: $color-grey;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-dark;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+
+    @media (max-width: 575px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    span {
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: $color-dark-01;
+    }
+
+    p {
+      color: $color-grey;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    a {
+      color: $color-primary;
+      font-size: 0.8rem;
+      font-weight: 500;
+      position: relative;
+      transition: 0.3s;
+
+      &::after {
+        content: ">";
+      }
+
+      &:hover {
+        color: $color-dark;
+      }
+    }
+  }
+
+  &__btns {
     display: flex;
     align-items: center;
-    justify-content: center;
-    z-index: 1000;
+    gap: 1rem;
 
-    &__overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.5);
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: start;
     }
 
-    &__content {
-        position: relative;
-        background: $color-white;
-        padding: 2rem;
-        border-radius: 12px;
-        z-index: 1001;
-        max-width: 800px;
-        width: 90%;
+    .btn--primary {
+      text-transform: uppercase;
     }
 
-    &__close {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        background: transparent;
-        border: none;
-        font-size: 1.3rem;
-        cursor: pointer;
-        color: $color-grey;
-        transition: color 0.2s ease;
-
-        &:hover {
-            color: $color-dark;
-        }
+    .quantidade {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.7rem 2rem;
+      border: 1px solid $color-grey-03;
+      border-radius: $border-radius-base-01;
     }
-
-    &__grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 2rem;
-
-        @media(max-width: 575px) {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    &__info {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-
-        span {
-            font-weight: 600;
-            font-size: 1.25rem;
-            color: $color-dark-01
-        }
-
-        p {
-            color: $color-grey;
-            font-size: .8rem;
-            font-weight: 500;
-        }
-
-        a {
-            color: $color-primary;
-            font-size: .8rem;
-            font-weight: 500;
-            position: relative;
-            transition: .3s;
-
-            &::after {
-                content: '>';
-            }
-
-            &:hover {
-                color: $color-dark;
-            }
-        }
-    }
-
-    &__btns {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-
-        @media (max-width: 1024px) {
-            flex-direction: column;
-            align-items: start;
-        }
-
-        .btn--primary {
-            text-transform: uppercase;
-        }
-
-        .quantidade {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: .7rem 2rem;
-            border: 1px solid $color-grey-03;
-            border-radius: $border-radius-base-01;
-        }
-    }
-
+  }
 }

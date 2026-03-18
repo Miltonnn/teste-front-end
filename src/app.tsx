@@ -17,7 +17,6 @@ export default function App() {
     return (
         <div>
             <Header />
-            
             <Hero />
             <IconesHome />
             <Produtos mostrarLinks={true} />
