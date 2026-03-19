@@ -1,52 +1,72 @@
 import { useState, useEffect } from "react";
 
 export interface Produto {
-    id: number;
-    productName: string;
-    descriptionShort: string;
-    price: number;
-    photo: string;
+  id: number;
+  productName: string;
+  descriptionShort: string;
+  price: number;
+  photo: string;
 }
 
+// CACHE GLOBAL
+let cache: Produto[] | null = null;
+let promise: Promise<Produto[]> | null = null;
+
 export const useProdutos = () => {
-    const [produtos, setProdutos] = useState<Produto[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+  const [produtos, setProdutos] = useState<Produto[]>(cache || []);
+  const [loading, setLoading] = useState(!cache);
+  const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        const fetchProdutos = async () => {
-            try {
-                const res = await fetch(
-                    "https://corsproxy.io/?" +
-                    encodeURIComponent(
-                        "https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json"
-                    )
-                );
+  useEffect(() => {
+    // Se já tem cache, não busca de novo
+    if (cache) {
+      setProdutos(cache);
+      setLoading(false);
+      return;
+    }
 
-                if (!res.ok) throw new Error(`Erro HTTP: ${res.status}`);
+    // Se já tem requisição em andamento, reutiliza
+    if (!promise) {
+      promise = fetch(
+        "https://corsproxy.io/?" +
+          encodeURIComponent(
+            "https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json",
+          ),
+      )
+        .then((res) => {
+          if (!res.ok) throw new Error(`Erro HTTP: ${res.status}`);
+          return res.json();
+        })
+        .then((data) => {
+          if (!data.success || !data.products) {
+            throw new Error("Estrutura da API inválida");
+          }
 
-                const data = await res.json();
-                if (!data.success || !data.products) throw new Error("Estrutura da API inválida");
+          const mapped = data.products.map((p: any, i: number) => ({
+            id: i + 1,
+            productName: p.productName || "Produto sem nome",
+            descriptionShort: p.descriptionShort || "Descrição não disponível",
+            price: Number(p.price) || 0,
+            photo:
+              p.photo || "https://via.placeholder.com/300x300?text=Produto",
+          }));
 
-                setProdutos(
-                    data.products.map((p: any, i: number) => ({
-                        id: i + 1,
-                        productName: p.productName || "Produto sem nome",
-                        descriptionShort: p.descriptionShort || "Descrição não disponível",
-                        price: Number(p.price) || 0,
-                        photo: p.photo || "https://via.placeholder.com/300x300?text=Produto",
-                    }))
-                );
-            } catch (err) {
-                console.error(err);
-                setError("Não foi possível carregar os produtos.");
-            } finally {
-                setLoading(false);
-            }
-        };
+          cache = mapped;
+          return mapped;
+        });
+    }
 
-        fetchProdutos();
-    }, []);
+    promise
+      .then((data) => {
+        setProdutos(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setError("Não foi possível carregar os produtos.");
+        setLoading(false);
+      });
+  }, []);
 
-    return { produtos, loading, error };
+  return { produtos, loading, error };
 };

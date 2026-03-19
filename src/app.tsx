@@ -9,13 +9,11 @@ import BotaoFlutuante from "./components/BotaoFlutuante/BotaoFlutuante";
 import BotoesRedesSociais from "./components/BotoesRedesSociais/BotoesRedesSociais";
 import Footer from "./components/Footer/Footer";
 import "./styles/global.scss";
-import "@splidejs/splide/dist/css/splide.min.css";
 
 export default function App() {
   return (
     <>
       <Header />
-
       <main>
         <Hero />
         <IconesHome />
@@ -27,7 +25,6 @@ export default function App() {
         <Produtos />
         <Newsletter />
       </main>
-
       <BotaoFlutuante />
       <BotoesRedesSociais />
       <Footer />
