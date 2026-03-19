@@ -9,26 +9,28 @@ import BotaoFlutuante from "./components/BotaoFlutuante/BotaoFlutuante";
 import BotoesRedesSociais from "./components/BotoesRedesSociais/BotoesRedesSociais";
 import Footer from "./components/Footer/Footer";
 import "./styles/global.scss";
-import '@splidejs/splide/dist/css/splide.min.css';
-
-
+import "@splidejs/splide/dist/css/splide.min.css";
 
 export default function App() {
-    return (
-        <div>
-            <Header />
-            <Hero />
-            <IconesHome />
-            <Produtos mostrarLinks={true} />
-            <Parceiros />
-            <Produtos />
-            <Parceiros />
-            <Marcas />
-            <Produtos />
-            <Newsletter />
-            <BotaoFlutuante />
-            <BotoesRedesSociais />
-            <Footer />
-        </div>
-    );
+  return (
+    <>
+      <Header />
+
+      <main>
+        <Hero />
+        <IconesHome />
+        <Produtos mostrarLinks={true} />
+        <Parceiros />
+        <Produtos />
+        <Parceiros />
+        <Marcas />
+        <Produtos />
+        <Newsletter />
+      </main>
+
+      <BotaoFlutuante />
+      <BotoesRedesSociais />
+      <Footer />
+    </>
+  );
 }

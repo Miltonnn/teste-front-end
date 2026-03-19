@@ -7,8 +7,8 @@ interface HeaderSearchProps {
 
 const HeaderSearch = ({ className = "" }: HeaderSearchProps) => (
     <div className={`header__input ${className}`}>
-        <input type="text" placeholder="O que você está buscando?" aria-label="Pesquisa" />
-        <button type="button">
+        <input type="text" placeholder="O que você está buscando?" aria-label="Campo de busca de produtos" />
+        <button type="button" aria-label="Pesquisar produtos">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
         </button>
     </div>
