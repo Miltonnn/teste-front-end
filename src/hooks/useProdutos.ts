@@ -18,21 +18,22 @@ export const useProdutos = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Se já tem cache, não busca de novo
     if (cache) {
       setProdutos(cache);
       setLoading(false);
       return;
     }
 
-    // Se já tem requisição em andamento, reutiliza
     if (!promise) {
-      promise = fetch(
-        "https://corsproxy.io/?" +
+      // Em desenvolvimento usa proxy (CORS), em produção usa API da Vercel
+      const url = import.meta.env.DEV
+        ? "https://corsproxy.io/?" +
           encodeURIComponent(
             "https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json",
-          ),
-      )
+          )
+        : "/api/produtos";
+
+      promise = fetch(url)
         .then((res) => {
           if (!res.ok) throw new Error(`Erro HTTP: ${res.status}`);
           return res.json();
