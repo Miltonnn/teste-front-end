@@ -20,45 +20,43 @@ O projeto foi totalmente **componentizado**, cada parte da interface possui seu 
 Segue a estrutura detalhada com destaques das principais mudanças:
 
 ```text
+public/
+└─ images/                # Imagens, ícones e arquivos estáticos acessados via URL
 src/
-├─ assets/                # Imagens, ícones e logotipos
-│  ├─ icones/
-│  ├─ marcas/
-│  └─ parceiros/
 ├─ components/
 │  ├─ Header/
 │  │  ├─ Header.tsx
 │  │  ├─ Header.scss
-│  │  ├─ IconTopo.tsx          # Subcomponente dos ícones do topo
-│  │  └─ headerData.ts         # Dados dos ícones e links
+│  │  ├─ IconTopo.tsx
+│  │  └─ headerData.ts
 │  ├─ Footer/
 │  │  ├─ Footer.tsx
 │  │  ├─ Footer.scss
-│  │  └─ footerData.ts         # Dados de links e redes sociais
+│  │  └─ footerData.ts
 │  ├─ IconesHome/
 │  │  ├─ IconesHome.tsx
 │  │  ├─ IconesHome.scss
-│  │  └─ IconeHomeItem.tsx     # Subcomponente de cada ícone
+│  │  └─ IconeHomeItem.tsx
 │  ├─ Marcas/
 │  │  ├─ Marcas.tsx
 │  │  ├─ Marcas.scss
-│  │  └─ marcasData.ts         # Dados das marcas
+│  │  └─ marcasData.ts
 │  ├─ Newsletter/
 │  │  ├─ Newsletter.tsx
 │  │  └─ Newsletter.scss
 │  ├─ Parceiros/
 │  │  ├─ Parceiros.tsx
 │  │  ├─ Parceiros.scss
-│  │  └─ parceirosData.ts      # Dados dos parceiros
+│  │  └─ parceirosData.ts
 │  └─ Produtos/
-│     ├─ Produtos.tsx           # Componente principal
-│     ├─ ProdutosModal.tsx      # Modal de produto
+│     ├─ Produtos.tsx
+│     ├─ ProdutosModal.tsx
 │     ├─ Produtos.scss
-│     ├─ ProdutoData.ts         # Tipos e links do produto
+│     ├─ ProdutoData.ts
 │     └─ @types/
 │        └─ splidejs__react-splide.d.ts
 ├─ hooks/
-│  └─ useProdutos.ts            # Hook para consumo da API de produtos
+│  └─ useProdutos.ts
 └─ App.tsx
 
 ````
@@ -72,6 +70,13 @@ src/
 - ✅ **Modal de produtos** com controle de quantidade, botão de compra e fallback de imagens.  
 - ✅ **Reutilização de subcomponentes** (ex.: `IconeHomeItem.tsx`) para maior modularidade e manutenção mais fácil.  
 - ✅ **Estilos reutilizáveis e consistentes:** uso de mixins (`@mixin button`) e classes utilitárias (`.container`) em todo o projeto.
+
+## ✨ Melhorias de UX
+🔝 Botão "Voltar ao topo": aparece ao rolar a página, permitindo retornar rapidamente ao início
+
+🔗 Botão flutuante para o repositório: acesso rápido ao GitHub do projeto, facilitando navegação e transparência
+
+Essas melhorias foram implementadas para proporcionar uma navegação mais fluida, intuitiva e moderna.
 
 ## ⚙️ Como rodar o projeto localmente
 
