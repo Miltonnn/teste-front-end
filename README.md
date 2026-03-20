@@ -88,6 +88,18 @@ O projeto foi desenvolvido seguindo boas práticas de **SEO** e **acessibilidade
 - ✅ **Reutilização de subcomponentes** (ex.: `IconeHomeItem.tsx`) para maior modularidade e manutenção mais fácil.  
 - ✅ **Estilos reutilizáveis e consistentes:** uso de mixins (`@mixin button`) e classes utilitárias (`.container`) em todo o projeto.
 
+## 📊 Performance (Google PageSpeed Insights)
+
+Para garantir um cenário mais próximo de produção, a aplicação foi analisada utilizando o Google PageSpeed Insights, considerando métricas de Performance, Acessibilidade, SEO e Boas Práticas.
+
+📱 Mobile
+
+ <img src="./public/images/mobile.webp" alt="Performance Mobile" width="600"/> 
+
+ 💻 Desktop
+ 
+ <img src="./public/images/desktop.webp" alt="Performance Desktop" width="600"/>
+ 
 ## ✨ Melhorias de UX
 🔝 Botão "Voltar ao topo": aparece ao rolar a página, permitindo retornar rapidamente ao início
 
