@@ -10,7 +10,7 @@ A aplicação foi construída em **React com TypeScript** e **Sass**, com foco e
 - 🎨 **Sass** (estilos modulares por componente)  
 - 🔍 **Boas práticas de SEO**  
 - 📦 **Splide.js** para carrosséis  
-- 🌐 **Proxy para consumo de API** (resolvendo CORS em ambiente local)  
+- 🌐 **Proxy** para consumo de API – utilizado para resolver problemas de CORS quando o projeto roda em ambiente local, garantindo que as requisições funcionem normalmente tanto localmente quanto na Vercel.
 
 ---
 
